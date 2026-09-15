@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple, responsive website built with plain HTML, CSS and JavaScript." />
+  <title>Neru &mdash; Simple Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Neru
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Switch theme"
+        aria-pressed="false"
+      >
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <p class="eyebrow">Plain HTML &middot; CSS &middot; JavaScript</p>
+        <h1>One page, zero build tools, everything you need.</h1>
+        <p class="lede">
+          A small, responsive starter page. Open <code>index.html</code> in a browser
+          and it just works &mdash; no install, no bundler, no dependencies.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <button class="btn btn-ghost" id="demoBtn" type="button">Try the counter</button>
+        </div>
+        <p class="counter-line">
+          Button clicked <strong id="count">0</strong> times.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <h2>What's inside</h2>
+        <p class="section-sub">Three files, cleanly separated.</p>
+
+        <ul class="cards">
+          <li class="card">
+            <h3>Semantic HTML</h3>
+            <p>Proper landmarks, headings and labels so the page reads well and stays accessible.</p>
+          </li>
+          <li class="card">
+            <h3>Modern CSS</h3>
+            <p>Custom properties, flexbox and grid. Responsive down to a phone with a single media query.</p>
+          </li>
+          <li class="card">
+            <h3>Vanilla JS</h3>
+            <p>Theme switching saved to <code>localStorage</code>, live form validation, and no frameworks.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="about">
+      <div class="wrap about-inner">
+        <div>
+          <h2>About</h2>
+          <p>
+            This is a placeholder section. Swap in whatever you like &mdash; a paragraph about
+            your project, a list of services, or a gallery of images.
+          </p>
+          <p>
+            Edit the text directly in <code>index.html</code>. Colours and spacing live at the
+            top of <code>styles.css</code> as CSS variables, so restyling is a two-minute job.
+          </p>
+        </div>
+        <dl class="stats">
+          <div>
+            <dt>Files</dt>
+            <dd>3</dd>
+          </div>
+          <div>
+            <dt>Dependencies</dt>
+            <dd>0</dd>
+          </div>
+          <div>
+            <dt>Load time</dt>
+            <dd>&lt;50ms</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap narrow">
+        <h2>Contact</h2>
+        <p class="section-sub">The form validates in the browser and doesn't post anywhere yet.</p>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <p class="error" data-error-for="name"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <p class="error" data-error-for="email"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <p class="error" data-error-for="message"></p>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; <span id="year">2026</span> Neru. Built with plain HTML, CSS and JS.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
